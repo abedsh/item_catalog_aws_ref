@@ -9,10 +9,10 @@ http://18.216.189.55.xip.io
 
 ## A summary of software you installed and configuration changes made.
 
-python 2.7 and all the item catalog project's dependencies
-sqlite3
-vim
-virtualenv
+* python 2.7 and all the item catalog project's dependencies
+* sqlite3
+* vim
+* virtualenv
 
 ## A list of any third-party resources you made use of to complete this project.
 
