@@ -1,31 +1,19 @@
-# Description
+i. The IP address and SSH port so your server can be accessed by the reviewer.
 
-An item catalog web app
+Ip address : 18.216.189.55
+SSH port : 2200
 
-# Install
-This project requires Python 2.7.12 and sql lite
+ii. The complete URL to your hosted web application.
 
-# Code backend
+http://18.216.189.55.xip.io
 
-__init__.py - Define all the essential apis the app will need, (login_manager, db_session, flask app) 
-model.py - Defines all sqlalchamy models used for crud operations, in addition to the flask login user class
-db_utils.py - Defines generic(for any type of a declared sqlalchamy model) sqlalchamy query operations
-views.py - Defines all the routed views of the app
-run.py - Defines the runner of the app
-client_secrets.json refer to https://developers.google.com/identity/sign-in/web/server-side-flow for steps to create your own client_secrets.json file
+iii. A summary of software you installed and configuration changes made.
 
+python 2.7 and all the item catalog project's dependencies
+sqlite3
+vim
+virtualenv
 
+iv. A list of any third-party resources you made use of to complete this project.
 
-# Code frontend
-
-static/js/login_gmail.js Defines callback function to the 
-header.html - Defines the header of the view, and login/logout callbacks, include the client id from the generated client_secret.json 
-index.html - Defines the home view
-item_details - Defines item details view
-category_details - Defines category details view
-
-
-# How to
-
-Compile and run the run.py to start the server on localhost:5000
-
+putty and git bash to ssh access the server
