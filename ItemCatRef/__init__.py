@@ -40,11 +40,12 @@ login_manager.init_app(app)
 
 
 
+CLIENT_SECRET_PATH = '/var/www/ItemCatRef/ItemCatRef/client_secrets.json'
 
 
 
 CLIENT_ID = json.loads(
-    open('/var/www/ItemCatRef/ItemCatRef/client_secrets.json', 'r').read())['web']['client_id']
+    open(CLIENT_SECRET_PATH, 'r').read())['web']['client_id']
 
 
 @app.route('/')
@@ -182,7 +183,7 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets(CLIENT_SECRET_PATH, scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
