@@ -87,7 +87,8 @@ class User(UserMixin):
 
 
 
-engine = create_engine('sqlite:///catalog.db')
+#engine = create_engine('sqlite:///catalog.db')
+engine = create_engine('postgresql://catalog:catalog101@localhost/catalog')
 
 
 Base.metadata.create_all(engine)
