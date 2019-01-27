@@ -1,8 +1,14 @@
-'''
-Created on Aug 30, 2018
+# '''
 
-@author: abedch
-'''
+
+# from flask import Flask
+# app = Flask(__name__)
+# @app.route("/")
+# def hello():
+#    return "Hello, I love Digital Ocean!"
+# if __name__ == "__main__":
+#    app.run()
+
 
 from flask import Flask, url_for, render_template
 from flask_login import LoginManager, login_user
@@ -45,10 +51,14 @@ CLIENT_ID = json.loads(
 @app.route('/index/')
 def showCatalog():
 
+    print ("reached function")
+
     categories = getDbSession().query(Category).all()
     latestItems = getDbSession().query(Item).order_by(Item.id.desc()).all()
 
     closeDbSession()
+
+    print(categories)
 
     return render_template('child_index.html',
                            categories=categories, latestItems=latestItems)
