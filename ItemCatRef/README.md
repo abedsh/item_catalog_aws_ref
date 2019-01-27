@@ -1,7 +1,7 @@
 ## The IP address and SSH port so your server can be accessed by the reviewer.
 
-Ip address : 18.216.189.55
-SSH port : 2200
+* Ip address : 18.216.189.55
+* SSH port : 2200
 
 ### The complete URL to your hosted web application.
 
