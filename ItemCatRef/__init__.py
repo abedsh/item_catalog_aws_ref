@@ -44,7 +44,7 @@ login_manager.init_app(app)
 
 
 CLIENT_ID = json.loads(
-    open('./client_secrets.json', 'r').read())['web']['client_id']
+    open('/var/www/ItemCatRef/ItemCatRef/client_secrets.json', 'r').read())['web']['client_id']
 
 
 @app.route('/')
