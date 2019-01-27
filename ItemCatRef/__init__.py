@@ -52,8 +52,6 @@ CLIENT_ID = json.loads(
 @app.route('/index/')
 def showCatalog():
 
-    print ("reached function")
-
     categories = getDbSession().query(Category).all()
     latestItems = getDbSession().query(Item).order_by(Item.id.desc()).all()
 
@@ -251,6 +249,9 @@ def gconnect():
     state = ''.join(random.
                     choice(string.ascii_uppercase + string.digits)
                     for x in xrange(32))
+
+    print(data)
+
 
     login_session['id'] = data['id']
     login_session['name'] = data['given_name']
